@@ -1,0 +1,77 @@
+:root {
+      /* border colors */
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+      --darkBlue: hsl(234, 12%, 34%);
+      --greyBlue: hsl(229, 6%, 66%);
+      --lightGrey: hsl(0, 0%, 98%);
+}
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--lightGrey)
+}
+.container {
+      padding: 70px 60px;
+}
+.header {
+      text-align: center;
+      color: var(--darkBlue);
+}
+.header > h1:first-child {
+      font-weight: 200;
+}
+.header > h1 {
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      font-size: 30px;
+}
+.header h1 + p {
+      font-weight: 200;
+      width: 45%;
+      margin: 20px auto 0 auto;
+}
+main .container {
+      padding: 0 60px 70px 60px;
+      position: relative;
+}
+main .container article {
+      background-color: var(--lightGrey);
+      box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
+      width: 25%;
+      padding: 10px 40px 30px 40px;
+      margin: auto auto 30px auto;
+      border-radius: 5px;
+      color: var(--darkBlue);
+      overflow: hidden;
+}
+main .container article img {
+      float: right;
+      padding-top: 50px
+}
+main .container article > h3 {
+      font-weight: 600;
+}
+main .container article > p {
+      font-weight: 200;
+}
+main .container article:first-of-type {
+      border-top: 5px solid var(--cyan);
+      position: absolute;
+      left: 3%;
+      top: 25%;
+}
+main .container article:nth-of-type(2) {
+      border-top: 5px solid var(--red);
+}
+main .container article:nth-of-type(3) {
+      border-top: 5px solid var(--orange);
+}
+main .container article:last-of-type {
+      border-top: 5px solid var(--blue);
+      position: absolute;
+      right: 3%;
+      top: 25%;
+}
