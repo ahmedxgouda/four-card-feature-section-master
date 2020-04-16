@@ -10,7 +10,7 @@
       --lightGrey: hsl(0, 0%, 98%);
 }
 /* Global */
-html {
+*, :before, :after {
       box-sizing: border-box
 }
 body {
@@ -50,7 +50,7 @@ main .container article {
       background-color: var(--lightGrey);
       box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
       display: inline-block;
-      width: 320px;
+      width: 400px;
       padding: 10px 40px 30px 40px;
       margin: 10px;
       border-radius: 5px;
@@ -84,12 +84,13 @@ main .container article:last-of-type {
 @media (max-width: 768px) {
       .container {
             width: 90%;             
-            padding: 0;
-            margin: auto !important
+            padding: 0;            
+            margin: auto;
       }
       .header {
-            width: 80%;  
-            padding: 70px 40px 30px 40px;    
+            width: 100%;  
+            padding: 70px 40px 30px 40px;
+            margin: auto               
       }
       .header h1 {
             font-size: 1.4em;            
@@ -99,11 +100,11 @@ main .container article:last-of-type {
             font-size: 0.9em
       }
       main .container {
-            padding: 10px;
+            padding: 0;
       }
       main .container article {
-            width: 85%;
-            margin: 20px auto;
+            width: 100%;
+            margin: 20px 0 0 0;
             padding: 20px 40px 30px 20px;
       }
 }
@@ -111,18 +112,25 @@ main .container article:last-of-type {
       main .container {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
       }
       main .container article {
-            width: 30%;
+            width: 45%;
+            margin: 10px;
       }
 }
 @media (min-width: 994px) and (max-width: 1365px) {
       main .container {
             display: flex;
             flex-wrap: wrap;
+            width: 80%;
+            justify-content: center;
+            padding: 0
       }
       main .container article {
-            width: 37%;
+            width: 45%;
+            margin: 20px 10px 0 10px;
+            padding: 20px 40px 30px 20px;
       }
 }
 @media (min-width: 1366px) {
