@@ -1,13 +1,15 @@
 :root {
-      /* border colors */
+      /* Border colors */
       --red: hsl(0, 78%, 62%);
       --cyan: hsl(180, 62%, 55%);
       --orange: hsl(34, 97%, 64%);
       --blue: hsl(212, 86%, 64%);
+      /* Text colors */
       --darkBlue: hsl(234, 12%, 34%);
       --greyBlue: hsl(229, 6%, 66%);
       --lightGrey: hsl(0, 0%, 98%);
 }
+/* Global */
 body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--lightGrey)
@@ -15,6 +17,7 @@ body {
 .container {
       padding: 70px 60px;
 }
+/* Header */
 .header {
       text-align: center;
       color: var(--darkBlue);
@@ -32,7 +35,9 @@ body {
       font-weight: 200;
       width: 45%;
       margin: 20px auto 0 auto;
+      color : var(--greyBlue);
 }
+/* Cards */
 main .container {
       padding: 0 60px 70px 60px;
       position: relative;
@@ -40,7 +45,7 @@ main .container {
 main .container article {
       background-color: var(--lightGrey);
       box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
-      width: 25%;
+      width: 320px;
       padding: 10px 40px 30px 40px;
       margin: auto auto 30px auto;
       border-radius: 5px;
@@ -56,11 +61,13 @@ main .container article > h3 {
 }
 main .container article > p {
       font-weight: 200;
+      color: var(--greyBlue);
 }
 main .container article:first-of-type {
       border-top: 5px solid var(--cyan);
       position: absolute;
-      left: 3%;
+      /* width: 22.184%; */
+      left: 4%;
       top: 25%;
 }
 main .container article:nth-of-type(2) {
@@ -72,6 +79,6 @@ main .container article:nth-of-type(3) {
 main .container article:last-of-type {
       border-top: 5px solid var(--blue);
       position: absolute;
-      right: 3%;
+      right: 4%;
       top: 25%;
 }
