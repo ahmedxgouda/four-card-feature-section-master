@@ -17,8 +17,14 @@ body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--lightGrey)
 }
+/* Grid Layout */
 .container {
+      --auto-grid-min-size: 20rem;
       padding: 70px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 2fr));
+      grid-gap: 1rem;
+      justify-content: center;
 }
 /* Header */
 .header {
@@ -32,25 +38,21 @@ body {
       font-weight: 600;
       margin: 0;
       padding: 0;
-      font-size: 30px;
+      font-size: 1.4rem;
 }
 .header h1 + p {
-      font-weight: 200;
-      width: 45%;
+      font-weight: 200;      
       margin: 20px auto 0 auto;
       color : var(--greyBlue);
+      font-size: 0.8em
 }
 /* Cards */
 main .container {
-      width: 80%;
       padding: 0 60px 70px 60px;
-      margin: auto;
 }
 main .container article {
       background-color: var(--lightGrey);
       box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
-      display: inline-block;
-      width: 400px;
       padding: 10px 40px 30px 40px;
       margin: 10px;
       border-radius: 5px;
@@ -80,84 +82,43 @@ main .container article:nth-of-type(3) {
 main .container article:last-of-type {
       border-top: 5px solid var(--blue);      
 }
-
-@media (max-width: 768px) {
+/* For iphone 5se only */
+@media (max-width: 320px) {
       .container {
-            width: 90%;             
-            padding: 0;            
-            margin: auto;
-      }
-      .header {
-            width: 100%;  
-            padding: 70px 40px 30px 40px;
-            margin: auto               
-      }
-      .header h1 {
-            font-size: 1.4em;            
-      }
-      .header h1 + p {
-            width: 100%;
-            font-size: 0.9em
-      }
-      main .container {
-            padding: 0;
-      }
-      main .container article {
-            width: 100%;
-            margin: 20px 0 0 0;
-            padding: 20px 40px 30px 20px;
+            --auto-grid-min-size: 18rem;
       }
 }
-@media (min-width: 769px) and (max-width: 993px) {
-      main .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-      }
-      main .container article {
-            width: 45%;
-            margin: 10px;
-      }
-}
-@media (min-width: 994px) and (max-width: 1365px) {
-      main .container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 80%;
-            justify-content: center;
-            padding: 0
-      }
-      main .container article {
-            width: 45%;
-            margin: 20px 10px 0 10px;
-            padding: 20px 40px 30px 20px;
-      }
-}
+/* The Special Design */
 @media (min-width: 1366px) {
       main .container {
-            position: relative;
-            width: auto
+            display: block;
       }
       main .container article {
             display: block;
-            margin: auto auto 30px auto;
+            width: 400px;
+            margin: 20px auto;
+      }
+      .header > h1 + p {
+            width: 30%;
       }
       main .container article:last-of-type {
             position: absolute;
-            right: 4%;
-            top: 25%;
+            right: 3%;
+            top: 75%;
       }
       main .container article:first-of-type {
             position: absolute;
-            left: 4%;
-            top: 25%;
+            left: 3%;
+            top: 75%;
       }
 }
 @media (min-width: 1440px) {
       main .container article:last-of-type {            
-            right: 7%;            
+            right: 6%; 
+            top: 55%;           
       }
       main .container article:first-of-type {            
-            left: 7%;            
+            left: 6%; 
+            top: 55%;            
       }
 }
