@@ -44,7 +44,8 @@ body {
       font-weight: 200;      
       margin: 20px auto 0 auto;
       color : var(--greyBlue);
-      font-size: 0.8em
+      line-height: 1.5em;
+      height: 3em;
 }
 /* Cards */
 main .container {
@@ -88,6 +89,12 @@ main .container article:last-of-type {
             --auto-grid-min-size: 18rem;
       }
 }
+/* The header Paragraph */
+@media (min-width: 769px) {
+      .header h1 + p {
+            width: 40%;
+      }
+}
 /* The Special Design */
 @media (min-width: 1366px) {
       main .container {
@@ -99,7 +106,7 @@ main .container article:last-of-type {
             margin: 20px auto;
       }
       .header > h1 + p {
-            width: 30%;
+            
       }
       main .container article:last-of-type {
             position: absolute;
