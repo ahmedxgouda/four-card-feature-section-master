@@ -107,6 +107,7 @@ main {
 @media (min-width: 1366px) {
       main {
             .container {
+                  position: relative;
                   display: block;
                   article {
                         display: block;
@@ -115,12 +116,12 @@ main {
                         &:first-of-type {
                               position: absolute;
                               left: 3%;
-                              top: 75%;
+                              top: 20%;
                         }
                         &:last-of-type {
                               position: absolute;
                               right: 3%;
-                              top: 75%;
+                              top: 20%;
                         }
                   }
             }
@@ -132,12 +133,10 @@ main {
             .container {
                   article {
                         &:first-of-type {
-                              left: 6%; 
-                              top: 55%; 
+                              left: 6%;                               
                         }
                         &:last-of-type {
-                              right: 6%; 
-                              top: 55%;  
+                              right: 6%;                                
                         }
                   }
             }
@@ -147,12 +146,10 @@ main {
 @media (min-width: 2560px) {
       main .container article {
             &:first-of-type {
-                  left: 25%;
-                  top: 33%;
+                  left: 25%;                  
             }
             &:last-of-type {
-                  right: 25%;
-                  top: 33%;
+                  right: 25%;                  
             }
       }
 }

@@ -118,6 +118,7 @@ main .container article:last-of-type {
 /* For FHD Screens */
 @media (min-width: 1366px) {
   main .container {
+    position: relative;
     display: block;
   }
   main .container article {
@@ -128,12 +129,12 @@ main .container article:last-of-type {
   main .container article:first-of-type {
     position: absolute;
     left: 3%;
-    top: 75%;
+    top: 20%;
   }
   main .container article:last-of-type {
     position: absolute;
     right: 3%;
-    top: 75%;
+    top: 20%;
   }
 }
 
@@ -141,11 +142,9 @@ main .container article:last-of-type {
 @media (min-width: 1440px) {
   main .container article:first-of-type {
     left: 6%;
-    top: 55%;
   }
   main .container article:last-of-type {
     right: 6%;
-    top: 55%;
   }
 }
 
@@ -153,10 +152,8 @@ main .container article:last-of-type {
 @media (min-width: 2560px) {
   main .container article:first-of-type {
     left: 25%;
-    top: 33%;
   }
   main .container article:last-of-type {
     right: 25%;
-    top: 33%;
   }
 }
