@@ -94,12 +94,8 @@ main {
 }
 /* The header Paragraph */
 @media (min-width: 769px) {
-      .header {
-            h1 {
-                  + p {
-                        width: 40%;
-                  }
-            }
+      .header h1 + p {
+            width: 40%;
       }
 }
 /* The Special Design */
@@ -129,16 +125,12 @@ main {
 }
 /* For 2K Screens */
 @media (min-width: 1440px) {
-      main {
-            .container {
-                  article {
-                        &:first-of-type {
-                              left: 6%;                               
-                        }
-                        &:last-of-type {
-                              right: 6%;                                
-                        }
-                  }
+      main .container article {
+            &:first-of-type {
+                  left: 6%;                               
+            }
+            &:last-of-type {
+                  right: 6%;                                
             }
       }
 }
