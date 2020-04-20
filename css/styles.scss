@@ -1,0 +1,143 @@
+:root {
+      /* Border colors */
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+      /* Text colors */
+      --darkBlue: hsl(234, 12%, 34%);
+      --greyBlue: hsl(229, 6%, 66%);
+      --lightGrey: hsl(0, 0%, 98%);
+}
+/* Global */
+*, :before, :after {
+      box-sizing: border-box
+}
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--lightGrey)
+}
+/* Grid Layout */
+.container {
+      --auto-grid-min-size: 20rem;
+      padding: 70px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 2fr));
+      grid-gap: 1rem;
+      justify-content: center;
+}
+/* Header */
+.header {
+      text-align: center;
+      color: var(--darkBlue);
+      > h1 {
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+            font-size: 1.4rem;
+            &:first-child {
+                  font-weight: 200;
+            }
+            + p {
+                  font-weight: 200;      
+                  margin: 20px auto 0 auto;
+                  color : var(--greyBlue);
+                  line-height: 1.5em;
+                  height: 3em;
+            }
+      }
+}
+/* Cards */
+main {
+      .container {
+            padding: 0 60px 70px 60px;
+            article {
+                  background-color: var(--lightGrey);
+                  box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
+                  padding: 10px 40px 30px 40px;
+                  margin: 10px;
+                  border-radius: 5px;
+                  color: var(--darkBlue);
+                  overflow: hidden;
+                  img {
+                        float: right;
+                        padding-top: 50px;
+                  }
+                  > h3 {
+                        font-weight: 600;
+                        + p {
+                              font-weight: 200;
+                              color: var(--greyBlue);
+                        }
+                  }
+                  // Borders
+                  &:first-of-type {
+                        border-top: 5px solid var(--cyan);      
+                  }
+                  &:nth-of-type(2) {
+                        border-top: 5px solid var(--red);
+                  }
+                  &:nth-of-type(3) {
+                        border-top: 5px solid var(--orange);
+                  }
+                  &:last-of-type {
+                        border-top: 5px solid var(--blue);      
+                  }
+            }
+      }
+}
+/* For iphone 5se only */
+@media (max-width: 320px) {
+      .container {
+            --auto-grid-min-size: 18rem;
+      }
+}
+/* The header Paragraph */
+@media (min-width: 769px) {
+      .header {
+            h1 {
+                  + p {
+                        width: 40%;
+                  }
+            }
+      }
+}
+/* The Special Design */
+@media (min-width: 1366px) {
+      main {
+            .container {
+                  display: block;
+                  article {
+                        display: block;
+                        width: 400px;
+                        margin: 20px auto;
+                        &:first-of-type {
+                              position: absolute;
+                              left: 3%;
+                              top: 75%;
+                        }
+                        &:last-of-type {
+                              position: absolute;
+                              right: 3%;
+                              top: 75%;
+                        }
+                  }
+            }
+      }
+}
+@media (min-width: 1440px) {
+      main {
+            .container {
+                  article {
+                        &:first-of-type {
+                              left: 6%; 
+                              top: 55%; 
+                        }
+                        &:last-of-type {
+                              right: 6%; 
+                              top: 55%;  
+                        }
+                  }
+            }
+      }
+}
