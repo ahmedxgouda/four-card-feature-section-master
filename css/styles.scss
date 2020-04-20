@@ -103,6 +103,7 @@ main {
       }
 }
 /* The Special Design */
+/* For FHD Screens */
 @media (min-width: 1366px) {
       main {
             .container {
@@ -125,6 +126,7 @@ main {
             }
       }
 }
+/* For 2K Screens */
 @media (min-width: 1440px) {
       main {
             .container {
@@ -138,6 +140,19 @@ main {
                               top: 55%;  
                         }
                   }
+            }
+      }
+}
+/* For 4K Screens */
+@media (min-width: 2560px) {
+      main .container article {
+            &:first-of-type {
+                  left: 25%;
+                  top: 33%;
+            }
+            &:last-of-type {
+                  right: 25%;
+                  top: 33%;
             }
       }
 }
