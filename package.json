@@ -1,0 +1,23 @@
+{
+  "name": "four-card-feature-section-master",
+  "version": "1.0.0",
+  "description": "Front End Mentor Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedXGoda/four-card-feature-section-master.git"
+  },
+  "author": "Ahmed Goda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedXGoda/four-card-feature-section-master/issues"
+  },
+  "homepage": "https://github.com/AhmedXGoda/four-card-feature-section-master#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "polyfill": "^0.1.0"
+  }
+}
