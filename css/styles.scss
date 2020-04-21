@@ -1,15 +1,15 @@
 :root {
-      /* Border colors */
+      // Border colors
       --red: hsl(0, 78%, 62%);
       --cyan: hsl(180, 62%, 55%);
       --orange: hsl(34, 97%, 64%);
       --blue: hsl(212, 86%, 64%);
-      /* Text colors */
+      // Text colors
       --darkBlue: hsl(234, 12%, 34%);
       --greyBlue: hsl(229, 6%, 66%);
       --lightGrey: hsl(0, 0%, 98%);
 }
-/* Global */
+// Global
 *, :before, :after {
       box-sizing: border-box
 }
@@ -17,7 +17,7 @@ body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--lightGrey)
 }
-/* Grid Layout */
+// Grid Layout
 .container {
       --auto-grid-min-size: 20rem;
       padding: 70px 60px;
@@ -26,7 +26,7 @@ body {
       grid-gap: 1rem;
       justify-content: center;
 }
-/* Header */
+// Header
 .header {
       text-align: center;
       color: var(--darkBlue);
@@ -47,7 +47,7 @@ body {
             }
       }
 }
-/* Cards */
+// Cards
 main {
       .container {
             padding: 0 60px 70px 60px;
@@ -86,20 +86,20 @@ main {
             }
       }
 }
-/* For iphone 5se only */
+//  For iphone 5se only 
 @media (max-width: 320px) {
       .container {
             --auto-grid-min-size: 18rem;
       }
 }
-/* The header Paragraph */
+//  The header Paragraph 
 @media (min-width: 769px) {
       .header h1 + p {
             width: 40%;
       }
 }
-/* The Special Design */
-/* For FHD Screens */
+//  The Special Design
+//  For FHD Screens
 @media (min-width: 1366px) {
       main {
             .container {
@@ -123,7 +123,7 @@ main {
             }
       }
 }
-/* For 2K Screens */
+//  For 2K Screens
 @media (min-width: 1440px) {
       main .container article {
             &:first-of-type {
@@ -134,7 +134,7 @@ main {
             }
       }
 }
-/* For 4K Screens */
+//  For 4K Screens
 @media (min-width: 2560px) {
       main .container article {
             &:first-of-type {
