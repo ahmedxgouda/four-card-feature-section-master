@@ -51,7 +51,7 @@ main .container {
     overflow: hidden; }
     main .container article img {
       float: right;
-      padding-top: 50px; }
+      padding-top: 15%; }
     main .container article > h3 {
       font-weight: 600; }
       main .container article > h3 + p {
@@ -70,13 +70,11 @@ main .container {
   .container {
     --auto-grid-min-size: 18rem; } }
 
-@media (min-width: 769px) {
+@media (min-width: 1174px) {
   .header h1 + p {
-    width: 40%; } }
-
-@media (min-width: 1366px) {
+    width: 40%; }
   main .container {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(8, 65px); }
     main .container article:first-of-type, main .container article:last-of-type {
       grid-row: 3 / 7; }
@@ -88,3 +86,7 @@ main .container {
     main .container article:last-of-type {
       order: 3;
       grid-column: 3; } }
+
+@media (min-width: 1366px) {
+  main .container {
+    grid-template-columns: repeat(3, 400px); } }

@@ -61,7 +61,7 @@ main {
                   overflow: hidden;
                   img {
                         float: right;
-                        padding-top: 50px;
+                        padding-top: 15%;            
                   }
                   > h3 {
                         font-weight: 600;
@@ -92,16 +92,13 @@ main {
             --auto-grid-min-size: 18rem;
       }
 }
-//  The header Paragraph 
-@media (min-width: 769px) {
+//  The Special Design
+@media (min-width: 1174px) {
       .header h1 + p {
             width: 40%;
       }
-}
-//  The Special Design
-@media (min-width: 1366px) {
       main .container {
-            grid-template-columns: repeat(3, 400px);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(8, 65px);
             article {
                   &:first-of-type, &:last-of-type {
@@ -120,5 +117,10 @@ main {
                         grid-column: 3;                      
                   }
             }
+      }
+}
+@media (min-width: 1366px) {
+      main .container {
+            grid-template-columns: repeat(3, 400px);
       }
 }
