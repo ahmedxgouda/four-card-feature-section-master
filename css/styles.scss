@@ -58,16 +58,21 @@ main {
                   margin: 10px;
                   border-radius: 5px;
                   color: var(--darkBlue);
-                  overflow: hidden;
-                  img {
-                        float: right;
-                        padding-top: 15%;            
+                  display: grid;           
+                  grid-template-rows: repeat(26, 10px);
+                  img {                            
+                        justify-self: right;
+                        align-self: flex-end;
+                        grid-row: 25
                   }
                   > h3 {
-                        font-weight: 600;
+                        font-weight: 600;    
+                        grid-row: 1 / 3;                    
                         + p {
                               font-weight: 200;
                               color: var(--greyBlue);
+                              margin-top: 0;
+                              grid-row: 8;
                         }
                   }
                   // Borders
