@@ -76,29 +76,15 @@ main .container {
 
 @media (min-width: 1366px) {
   main .container {
-    position: relative;
-    display: block; }
-    main .container article {
-      display: block;
-      width: 400px;
-      margin: 20px auto; }
-      main .container article:first-of-type {
-        position: absolute;
-        left: 3%;
-        top: 20%; }
-      main .container article:last-of-type {
-        position: absolute;
-        right: 3%;
-        top: 20%; } }
-
-@media (min-width: 1440px) {
-  main .container article:first-of-type {
-    left: 6%; }
-  main .container article:last-of-type {
-    right: 6%; } }
-
-@media (min-width: 2560px) {
-  main .container article:first-of-type {
-    left: 25%; }
-  main .container article:last-of-type {
-    right: 25%; } }
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(8, 65px); }
+    main .container article:first-of-type, main .container article:last-of-type {
+      grid-row: 3 / 7; }
+    main .container article:nth-of-type(2) {
+      grid-row: 1 / 5; }
+    main .container article:nth-of-type(3) {
+      order: 4;
+      grid-row: 5 / 9; }
+    main .container article:last-of-type {
+      order: 3;
+      grid-column: 3; } }

@@ -72,7 +72,7 @@ main {
                   }
                   // Borders
                   &:first-of-type {
-                        border-top: 5px solid var(--cyan);      
+                        border-top: 5px solid var(--cyan);                              
                   }
                   &:nth-of-type(2) {
                         border-top: 5px solid var(--red);
@@ -99,49 +99,26 @@ main {
       }
 }
 //  The Special Design
-//  For FHD Screens
 @media (min-width: 1366px) {
-      main {
-            .container {
-                  position: relative;
-                  display: block;
-                  article {
-                        display: block;
-                        width: 400px;
-                        margin: 20px auto;
-                        &:first-of-type {
-                              position: absolute;
-                              left: 3%;
-                              top: 20%;
-                        }
-                        &:last-of-type {
-                              position: absolute;
-                              right: 3%;
-                              top: 20%;
-                        }
+      main .container {
+            grid-template-columns: repeat(3, 400px);
+            grid-template-rows: repeat(8, 65px);
+            article {
+                  &:first-of-type, &:last-of-type {
+                        grid-row: 3 / 7;
+                        
                   }
-            }
-      }
-}
-//  For 2K Screens
-@media (min-width: 1440px) {
-      main .container article {
-            &:first-of-type {
-                  left: 6%;                               
-            }
-            &:last-of-type {
-                  right: 6%;                                
-            }
-      }
-}
-//  For 4K Screens
-@media (min-width: 2560px) {
-      main .container article {
-            &:first-of-type {
-                  left: 25%;                  
-            }
-            &:last-of-type {
-                  right: 25%;                  
+                  &:nth-of-type(2) {
+                        grid-row: 1 / 5;
+                  }
+                  &:nth-of-type(3) {                        
+                        order: 4;
+                        grid-row: 5 / 9;
+                  }
+                  &:last-of-type {
+                        order: 3;  
+                        grid-column: 3;                      
+                  }
             }
       }
 }
