@@ -30,11 +30,11 @@ body {
 .header {
       text-align: center;
       color: var(--darkBlue);
-      > h1 {
+      > h2 {
             font-weight: 600;
             margin: 0;
             padding: 0;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             &:first-child {
                   font-weight: 200;
             }
@@ -42,8 +42,7 @@ body {
                   font-weight: 200;      
                   margin: 20px auto 0 auto;
                   color : var(--greyBlue);
-                  line-height: 1.5em;
-                  height: 3em;
+                  line-height: 1.5em;                  
             }
       }
 }
@@ -52,7 +51,7 @@ main {
       .container {
             padding: 0 60px 70px 60px;
             article {
-                  background-color: var(--lightGrey);
+                  background-color: white;
                   box-shadow: 1px 10px 15px rgba(212, 212, 212, 0.9);
                   padding: 10px 40px 30px 40px;
                   margin: 10px;
@@ -65,7 +64,7 @@ main {
                         align-self: flex-end;
                         grid-row: 25
                   }
-                  > h3 {
+                  > h1 {
                         font-weight: 600;    
                         grid-row: 1 / 3;                    
                         + p {
@@ -97,11 +96,18 @@ main {
             --auto-grid-min-size: 18rem;
       }
 }
+@media (max-width: 524px) {
+      .header > h2 {
+            font-size: 1.4em;
+      }
+}
+@media (min-width: 925px) {
+      .header h2 + p {
+            width: 50%;
+      }
+}
 //  The Special Design
 @media (min-width: 1174px) {
-      .header h1 + p {
-            width: 40%;
-      }
       main .container {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(8, 65px);
