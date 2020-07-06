@@ -109,7 +109,7 @@ main {
       }
 }
 //  The Special Design
-@media (min-width: 1174px) {
+@media (min-width: 1128px) {
       main .container {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(8, 65px);
